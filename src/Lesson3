@@ -67,5 +67,4 @@ class Lesson3 {
         }
         System.out.println(Arrays.toString(arr));
     }
-
 }
