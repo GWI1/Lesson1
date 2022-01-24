@@ -1,0 +1,71 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+/*Java 1 Homework 3
+ *@author Ksenia
+ * @version date 24/01/22
+ *
+ */
+
+class Lesson3 {
+    public static void main(String[] args) {
+        invertArray();
+        fillArray();
+        changeArray();
+        fillDiagonal();
+        inputData();
+    }
+    static void invertArray() {
+        int[] arr = { 1, 0, 1, 0, 0, 1, 0 };
+        System.out.println("Not edited array:" + Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]!=0) {
+                arr[i] = 0;
+            } else {
+                arr[i] = 1;
+            }
+        }
+        System.out.println("Edited array      :" + Arrays.toString(arr));
+    }
+    static void fillArray() {
+        int[] arr = new int[100];
+        System.out.println("Aray with 0:" + Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=i+1;
+        }
+        System.out.println("Order from 1 to 100:" + Arrays.toString(arr));
+    }
+    static void changeArray() {
+        int[] arr = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 6) {
+                arr[i] = arr[i] * 2;
+            }
+        }
+            System.out.println("Changed array:" + Arrays.toString(arr));
+    }
+    static void fillDiagonal() {
+        System.out.println("Diagonal of 1:");
+        int[][] arr = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            arr[i][i]=1;
+        for (int j = 0; j < 10; j++) {
+            System.out.print(arr[i][j] + " ");
+        }
+        System.out.println();
+        }
+    }
+    static void inputData() {
+        Scanner scanner = new Scanner (System.in);
+        System.out.print ("len: ");
+        int len=scanner.nextInt();
+        System.out.print ("initialValue: ");
+        int init =scanner.nextInt();
+        int [] arr = new int [len];
+        for (int i=0; i<arr.length;i++){
+            arr[i] = init;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+}
